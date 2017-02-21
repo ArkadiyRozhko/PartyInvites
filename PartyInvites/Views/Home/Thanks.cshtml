@@ -9,18 +9,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Thanks</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet"/>
+    <style>
+        body {
+            background: #F1F1F1;
+        }
+    </style>
 </head>
 <body>
-<div>
+<div class="text-center">
     <h1>Спасибо! @Model.Name</h1>
-    @if (@Model.WillAttend==true)
-    {
-        @: Здорово что Вы приедете
+    <div class="lead">
+        @if (@Model.WillAttend == true)
+        {
+            @: Здорово что Вы приедете
     }
-    else
-    {
-        @: Жаль что Вас не будет
+        else
+        {
+            @: Жаль что Вас не будет
     }
+    </div>
 </div>
 </body>
 </html>
